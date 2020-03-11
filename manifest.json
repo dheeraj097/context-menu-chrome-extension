@@ -1,0 +1,18 @@
+{
+   "background": {
+      "persistent": true,
+      "scripts": ["js/search.js" ]
+   },
+   "description": "Use the right-click menu to search for selected text in different search engines",
+   "options_page": "options.html",
+   "icons": {
+      "128": "images/chrome-128.png",
+      "16": "images/chrome-16.png",
+      "48": "images/chrome-48.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "1.0.1",
+   "name": "Context Menu",
+   "permissions": [ "contextMenus", "tabs" ],
+   "version": "1.0.1"
+}
