@@ -7,14 +7,6 @@ chrome.contextMenus.create(
 );
 chrome.contextMenus.create(
 	{
-		title: "OpenCorporates-Officer", 
-		contexts:["selection"], 
-		onclick: searchSelection,
-		parentId: "parent",
-	}
-);
-chrome.contextMenus.create(
-	{
 		title: "google", 
 		contexts:["selection"], 
 		onclick: searchSelection,
@@ -45,12 +37,20 @@ chrome.contextMenus.create(
 		parentId: "parent",
 	}
 );
+chrome.contextMenus.create(
+	{
+		title: "Amazon", 
+		contexts:["selection"], 
+		onclick: searchSelection,
+		parentId: "parent",
+	}
+);
 
 function searchSelection(info) {
 	var searchString = info.selectionText
-	chrome.tabs.create({url: "https://opencorporates.com/officers?&q=" + searchString})
 	chrome.tabs.create({url: "https://www.google.com/search?q=" + searchString})
 	chrome.tabs.create({url: "https://www.bing.com/search?q=" + searchString})
 	chrome.tabs.create({url: "https://search.yahoo.com/search?vc=&p=" + searchString})
 	chrome.tabs.create({url: "http://en.wikipedia.org/wiki/Special:Search?search=" + searchString+ "&go=Go"})
+	chrome.tabs.create({url: "https://www.amazon.in/s?k=" + searchString})
 }
